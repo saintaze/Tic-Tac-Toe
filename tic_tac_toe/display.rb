@@ -22,7 +22,7 @@ class Display
       if (i + 1) % 3 == 0
         board_str += " #{i+1} ".cyan if q.nil? 
         board_str += "   ".cyan if q
-        board_str += " \n---+---+---\n".cyan if i < cells_with_marks.length - 1
+        board_str += "\n" + "---+---+---".cyan + "\n" if i < cells_with_marks.length - 1
       else
         board_str += " #{i+1} |".cyan if q.nil? 
         board_str += "   |".cyan if q
@@ -39,7 +39,7 @@ class Display
       q = "   ".gray_bg if q.nil?
       if (i + 1) % 3 == 0
         board_str += q + "\n"
-        board_str += "---+---+---\n".gray_bg.black.bold if i < cells_with_marks.length - 1
+        board_str += "---+---+---".gray_bg.black.bold + "\n" if i < cells_with_marks.length - 1
       else
         board_str += q + "|".gray_bg.black.bold
       end
@@ -59,19 +59,19 @@ class Display
   end
 
   def display_name_question(player)
-    print player.brown.bold + ", what's your name ?"
+    print player.brown.bold + ", what's your name ? "
   end
 
   def display_mark_selection_question(player)
-    print player.name.brown.bold + " would you like to be " + "'O'".brown.bold + " or " + "'X'".brown.bold + " ?"
+    print player.name.brown.bold + " would you like to be " + "'O'".brown.bold + " or " + "'X'".brown.bold + " ? "
   end
 
   def display_selected_marks_message(p_1, p_2)
     puts p_1.name.brown.bold + " your mark is " + "'#{p_1.mark}'\n".brown.bold + p_2.name.brown.bold + " your mark is " + "'#{p_2.mark}'\n".brown.bold
   end
 
-  def display_validate_mark_message(player)
-    puts "#{player.name} please select correct mark 'O' or 'X'"
+  def display_invalid_mark_message(player)
+    puts player.name.brown.bold + " please select a correct mark " + "'O'".brown.bold + " or " + "'X'".brown.bold
   end
 
   def create_spot_unavailable_message(current_player, move)

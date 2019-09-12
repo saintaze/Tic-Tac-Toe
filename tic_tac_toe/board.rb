@@ -8,7 +8,7 @@ class Board
 
   def validate_mark(p_1, display)
     until p_1.mark == 'X' || p_1.mark == 'O'
-      display.display_validate_mark_message(p_1)
+      display.display_invalid_mark_message(p_1)
       p_1.mark = gets.chomp.upcase
     end
   end
