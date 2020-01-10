@@ -1,5 +1,5 @@
 # Tic-Tac-Toe
-A Command Line Tic Tac Toe Game
+It is a command line tic tac toe game.
 
 ### Features
 + Colored UI
@@ -10,7 +10,7 @@ A Command Line Tic Tac Toe Game
 + Ruby
 
 # Live Version
-####  URL: [Play the Game](https://repl.it/@saintaze/Tic-Tac-Toe)
+####  URL: [Play Tic Tac Toe](https://repl.it/@saintaze/Tic-Tac-Toe)
 
 # Author
 Saintaze [@saintaze](https://github.com/saintaze/)
